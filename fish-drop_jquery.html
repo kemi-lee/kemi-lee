@@ -1,0 +1,145 @@
+<html>
+<head>
+<title></title>
+
+<style type="text/css">
+
+body {
+	text-align: center;
+	font-family: comic sans ms;
+	color: darkred;
+	background-image: url("http://newton.ncc.edu/gansonj/ite254/img/turtle_bkg.jpg");
+}
+
+#pagewrap {
+	border: 6px #0033CC solid;
+	width: 750px;
+	margin: 40px auto 0px auto;
+	padding: 30px;
+	border-radius: 15px;
+	background-color: lightblue;
+	background-image: url("http://newton.ncc.edu/gansonj/ite254/img/fish_bkg.jpg");
+}
+
+#heading {
+	font-family: arial;
+	font-size: 1.75em;
+	font-weight: bold;
+	margin-bottom: 15px;
+	background-color: tan;
+	border-radius: 25px;
+	padding: 10px 0px 10px 0px;
+}
+
+#contentwrap {
+	background-color: white;	
+	border: 6px #0033CC double;
+	border-radius: 15px;
+	padding: 20px;
+	height: 600px;
+}
+
+#output {
+	font-family: arial;
+	font-size: 1.75em;
+	font-weight: bold;
+	background-color: lightblue;
+	border-radius: 25px;
+	margin-bottom: 15px;
+	padding: 10px 0px 10px 0px;
+}
+
+input {
+	border: 3px red solid;
+	font-color: red;
+	background-color: white;
+	cursor: pointer;
+}
+#fish {
+	cursor: pointer;
+
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+$("document").ready( function() {
+
+	$("#fish").draggable( { 
+	
+		containment : "#contentwrap", 
+		revert : "invalid",
+		cursor: "pointer"
+		
+		
+	
+	} ); // ends draggable
+	
+	
+	$("#aquarium").droppable( {
+	
+		accept: "#fish",
+		tolerance: "pointer",
+		drop: function( event, ui ) {
+			
+			$.ajax( {
+				 url: "fish-drop_ajax.php",
+				 type: "POST",
+				 data: "fishcheck=ll",
+				 success: function( msg ) {
+					
+					$("#output").html("<div>I have been dropped " + msg + " times<div>" );
+					S("#output").css( "background-color", "purple" );
+					$("#output").css ( "color", "white" ) ;
+					$("#fish").draggable( "disable" );
+					
+				 } //ends success
+			
+			} ); //ends ajax code
+			
+		} //ends drop
+	
+	
+	
+	} ) //ends droppable
+
+	
+	
+} ); // ends document.ready
+
+</script>
+
+</head>
+
+<body>
+
+<div id="pagewrap">
+
+	<div id="heading">Drag and drop the fish into the aquarium</div>
+
+	<div id="contentwrap">
+		
+		<div id="output">Get me in the water, quickly!!</div>
+		
+		<div>
+			<img id="aquarium" class="ui-widget-header" src="http://newton.ncc.edu/gansonj/ite254/img/aquarium.jpg" />
+		</div>
+		
+		<div>
+			<img  id="fish" class="ui-widget-content" src="http://newton.ncc.edu/gansonj/ite254/img/fish.png" />
+		</div>
+		
+	</div> <!-- ends div#contentwrap -->
+
+	<div style="margin-top:15px;">
+		<input type="button" value="reset fish" onClick="javascript:location.reload();">
+	</div>
+	
+</div> <!-- ends div#pagewrap -->
+
+</body>
+</html>
+

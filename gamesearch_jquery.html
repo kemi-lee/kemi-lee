@@ -1,0 +1,121 @@
+<html>
+<head>
+<title></title>
+
+
+<style type="text/css">
+
+body {
+	background-image: url("http://newton.ncc.edu/gansonj/ite254/img/space_invaders.jpg");
+	font-family: arial;
+	color: #454F8C;
+}
+
+#contentwrap {
+	background: #FFFFFF;
+	background-image: url("http://newton.ncc.edu/gansonj/ite254/img/spyro.jpg");
+	background-repeat: no-repeat;
+	background-position: right 150;	
+	border: 8px #FF9E01 solid;
+	padding: 20px;
+	width: 650px;
+	margin: 20px auto 0px auto;
+	border-radius: 25px;
+	min-height: 400px;
+}
+
+#heading {
+	font-size: 2.2em;
+	border-bottom: 6px #484452 double;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.bottomdiv {
+ 	margin-bottom: 15px;
+ }
+ 
+ .spacer {
+	margin-bottom: 10px;
+ }
+ 
+ #hotpick {
+ 	color: red;
+}
+
+ #lowpick {
+ 	color: green;
+ }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready( function() {
+	//assign submit handler to button
+	$("#gameform").on( "submit", function() {
+		
+		var gamename = $("#gamename").val();
+		
+		//invoke ajax to call upon a server side php file
+		//this file will recieve the user input, query the DB, CONSTRUCT output
+		// and send output back
+		$.ajax( {
+		
+			url : "gamesearch_ajax.php",
+			type : "POST", 
+			data : "gamename=" + gamename,
+			success : function( msg ) {
+			
+				$("#output").html( msg );
+			}
+			
+		
+		
+		} );// ends ajax code
+	
+	} ); //ends submit handler
+
+
+
+} ); // ends document.ready
+
+</script>
+
+</head>
+<body>
+
+<div id="contentwrap">
+	
+	<div>
+	
+	<div id="heading">Search Video Games Using Ajax</div>
+	
+		<form action="javascript:void(0);" id="gameform" >
+		
+			<div class="spacer">
+				<input type="text" id="gamename">
+			</div>
+			
+			<div class="spacer">
+				<input type="submit" value="Search Games">
+			</div>
+		
+		</form>
+	
+		<div id="output"></div>
+		
+		<div id="output"></div>
+	
+	</div>	
+	
+</div> <!-- ends div#contentwrap -->
+
+</body>
+</html>
+
+
+
