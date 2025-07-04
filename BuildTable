@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Table Demo</title>
+
+  <style type="text/css">
+    body {
+      background-image: url("https://newton.ncc.edu/gansonj/ite154/img/tables.jpg");
+      color: black;
+      font-family: arial;
+      text-align: center;
+    }
+
+    #header {
+      margin: 25px 150px 0px 150px;
+      color: white;
+      background: #003366;
+      font-weight: bold;
+      font-size: 1.45em;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      padding: 20px 0px;
+    }
+
+    #contentwrap {
+      margin: 0px 150px;
+      background: #FFFFFF;
+      border: 2px solid #003366;
+      padding: 10px;
+    }
+
+    .formtext {
+      color: black;
+      margin-top: 15px;
+    }
+
+    .formfield {
+      padding: 8px;
+      width: 300px;
+      background: #CCCC99;
+      color: black;
+      border: 2px black solid;
+      border-radius: 25px;
+    }
+
+    #button {
+      background: #003366;
+      color: white;
+      cursor: pointer;
+      padding: 5px 0px;
+      border: 3px solid #CCCC99;
+      border-radius: 25px;
+      width: 150px;
+    }
+
+    #button:hover {
+      background: #CCCCCC;
+      color: #003366;
+      border: 3px solid #003366;
+    }
+
+    #footer {
+      margin: 0px 150px;
+      background: #003366;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      padding: 30px 0px;
+    }
+
+    table {
+      border: 5px maroon double;
+    }
+
+    th {
+      color: red;
+      background-color: lightblue;
+    }
+
+    .evenrow {
+      background-color: darkblue;
+      color: yellow;
+    }
+
+    .oddrow {
+      background-color: maroon;
+      color: white;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#tablebutton").on("click", function () {
+        var startnum = parseInt($("#startnum").val());
+        var endnum = parseInt($("#endnum").val());
+
+        // Input validation
+        if (isNaN(startnum) || isNaN(endnum) || startnum > endnum) {
+          alert("Please enter valid numbers, and make sure the start number is less than or equal to the end number.");
+          return;
+        }
+
+        // Build the table
+        var msg = "<table border='3' width='80%' align='center'>";
+        msg += "<tr><th>Number</th></tr>";
+
+        for (var i = startnum; i <= endnum; i++) {
+          var rowClass = (i % 2 === 0) ? "evenrow" : "oddrow";
+          msg += `<tr class="${rowClass}"><td>${i}</td></tr>`;
+        }
+
+        msg += "</table>";
+
+        $("#output").html(msg);
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    JQuery and Ajax Practice
+  </div>
+
+  <div id="contentwrap">
+
+    <form>
+      <div class="formtext">Enter Starting Number</div>
+      <input type="text" class="formfield" id="startnum">
+
+      <div class="formtext">Enter Ending Number</div>
+      <input type="text" class="formfield" id="endnum">
+
+      <div style="margin-top:20px;">
+        <input type="button" value="Call Ajax" id="tablebutton">
+      </div>
+    </form>
+
+    <center>
+      <div id="output" style="margin-top:20px;"></div>
+    </center>
+
+  </div> <!-- ends contentwrap -->
+
+  <div id="footer"></div>
+
+</body>
+</html>
