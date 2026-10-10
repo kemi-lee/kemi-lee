@@ -1,61 +1,49 @@
-## Hi there I am Eunice 👋
+## Hi there, I'm Eunice 👋
 
+**Full-Stack Developer | QA Automation | CPIS Graduate, Farmingdale State '26 (Magna Cum Laude)**
 
+I build practical web software and test it until it holds up. Based on Long Island, looking for an entry-level software engineering, AI development, or technical support role in the NYC area.
 
--Aspiring Full-Stack Developer & Systems Analyst
-Building practical software solutions with a focus on web development, systems analysis, and network administration.
+🌐 **Portfolio:** [kemi-lee.github.io/portfolio](https://kemi-lee.github.io/portfolio/)
 
-🌟 About Me
-I'm pursuing a career in Full-Stack Development and Systems Analysis, passionate about leveraging technology to solve real-world problems. With a blend of front-end, back-end, and system management skills, I strive to create efficient and effective solutions for businesses and users alike.
+## 🚀 Featured Projects
 
-Key Skills
-Languages: C#, PHP, JavaScript, HTML, CSS
-Frameworks: ASP.NET, MVC, Bootstrap
-Databases: MySQL, Microsoft SQL
-Systems: Active Directory, RSAT, DHCP, Firewalls
-Tools: Git, AMPPS Server, Visual Studio
-Machine Learning: Introductory knowledge of NumPy, Pandas, and Scikit-Learn
+**[SmartPlate](https://smartplateseniors-production.up.railway.app/PHP/index.php)**: a full-stack nutrition web app with three Claude API features: a chatbot, a personalized meal plan generator, and a shopping list builder with PDF export. I led a team of five and built the database, dashboard, user authentication, and Railway deployment. I'm still improving it. *(PHP, MySQL, JavaScript, Bootstrap, Claude API)*
 
-🚀 Current Projects & Highlights
-Coffee Shop Web App
-Built a full-stack app using C#, JavaScript, and Bootstrap to create a seamless user experience and robust back-end integration.
+**[SmartPlate Test Suite](https://github.com/kemi-lee/smartplate-tests)**: 20+ end-to-end Playwright tests covering login, signup, access control, the shopping list, and the AI meal plan. It caught real bugs, including a missing login redirect that I fixed. *(Playwright, JavaScript)*
 
-Coffe Shop Database
-Developed a Database using Microsoft SQL Server for a coffee shop web app to ensure integration of front-end and back-end properly.
+**[Stylz](https://github.com/DeshanaeMorris/Outfit-Planner-Project)**: a desktop outfit planner built by a team of four. I built the JavaFX screens and the Firebase authentication (signup, login, and password reset with emails), created the unit tests, and wrote the documentation. *(Java, JavaFX, Firebase)*
 
-Lash Extensions & Booking System
-Developed a customer-friendly booking platform using PHP and MySQL with a simple and intuitive interface for a beauty business.
+**[WNBA Mini Data Jam](https://nehasaji28.github.io/GravityFalls/)**: our team won the fan route at this Girls Who Code event hosted by the WNBA with AWS. We turned the Gravity stat into an animated story, and I wrote the story and the 5-minute pitch.
 
-Appliance Warehouse Case Study
-Conducted a case study focusing on optimizing service department efficiency through SWOT analysis, organizational chart creation, and systems improvement.
+**More:** a coffee shop web app and database (C#, MVC, Bootstrap, SQL Server), a lash booking system (PHP, MySQL), and an appliance warehouse systems analysis case study (SWOT analysis, org chart, process improvement).
 
-AMPPS Server Project
-Implemented royalty calculations and decision-making tools using PHP on AMPPS, enhancing user interaction through clean data outputs.
+## Skills
 
-📚 Professional Development
-Pursuing:
+- **Languages:** JavaScript, Python, Java, PHP, C#, SQL, HTML, CSS
+- **Frameworks & tools:** Bootstrap, ASP.NET MVC, JavaFX, Firebase, Playwright, Claude API, Git/GitHub, Docker, Railway
+- **Databases:** MySQL, Microsoft SQL Server
+- **Systems:** Active Directory, RSAT, DHCP, firewalls
+- **Practices:** Agile/Scrum, test plans, bug reports, technical writing
+- **Data & ML:** introductory NumPy, Pandas, and Scikit-Learn
 
-Full-Stack Development with a focus on web apps and system integration
-Systems Analysis, improving my ability to evaluate and optimize business processes
-Recent Labs:
+##  Learning Right Now
 
-Extensive lab work in Active Directory and RSAT
-Hands-on experience with system administration and network protocol configurations
-🛠️ Next Steps
-Continue building full-stack applications with an emphasis on security and scalability
-Deepen my understanding of cloud computing and DevOps principles for more flexible system designs
-Further explore machine learning and data analysis to add predictive capabilities to future projects
+- Python (CS50P)
+- CompTIA A+ (in progress)
+- Deeper test automation and more AI-powered features for my projects
 
-📬 Connect with Me
-LinkedIn: www.linkedin.com/in/akinmade-oluwakemi-06523b28b
+## Next Up
 
-Email: akinmadeascol2019@gmail.com
+- Add CI (GitHub Actions) to my test suite
+- Learn React
+- Keep building full-stack apps with a focus on security and reliability
 
-🎯 Career Goals
-I’m passionate about combining my skills in web development, systems analysis, and networking to contribute to innovative tech projects. Always learning, always growing!
+## Connect with Me
 
-🎉 Fun Fact
-When I’m not coding, you’ll likely find me researching new technologies, and binge-watching retro series, or making TikTokswedq`!
+- LinkedIn: [linkedin.com/in/kemi03](https://www.linkedin.com/in/kemi03/)
+- Email: akinmadeascol2019@gmail.com
 
+## 🎉 Fun Fact
 
--->
+When I'm not coding, you'll likely find me researching new tech, binge-watching retro series, or making TikToks.
